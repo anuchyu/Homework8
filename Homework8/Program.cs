@@ -38,14 +38,7 @@ namespace Homework8
 
             void Delete()
             {
-                for (int i = 0; i < numbers.Count; i++)
-                {
-                    if (numbers[i] > 25 && numbers[i] > 50)
-                    {
-                        numbers.Remove(numbers[i]);
-                        i--;
-                    }
-                }
+                numbers.RemoveAll(item => item >= 25 && item <= 50);
             } 
             Console.ReadKey();
         }
